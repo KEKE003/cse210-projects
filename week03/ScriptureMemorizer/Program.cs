@@ -29,6 +29,7 @@ namespace ScriptureMemorizer
                 if (currentScripture.IsCompletelyHidden())
                 {
                     Console.WriteLine("The entire scripture has been hidden.");
+                    break;
                 }
 
                 Console.WriteLine("Press Enter to hide more words, or type 'quit' to exit: ");

@@ -12,7 +12,7 @@ namespace JournalProgram
 
         public void Display()
         {
-           Console.WriteLine($"date: {_date} - prompt: {_promptText}");
+           Console.WriteLine($"{_date} - prompt: {_promptText}");
            Console.WriteLine($"{_entryText}");
            Console.WriteLine($"mood: {_mood}");
            Console.WriteLine();
