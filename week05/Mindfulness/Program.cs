@@ -1,7 +1,7 @@
 using System;
 
 /* ========CREATIVITY:
-1.Enhanced Random Poll Tracking. Thr ReflectionActivity.cs and the ListingActivity.cs have been upgraded to not repeat any prompt or question in a session.===========================*/
+1.Enhanced Random Poll Tracking. The ReflectionActivity.cs and the ListingActivity.cs have been upgraded to not repeat any prompt or question in a session.===========================*/
 
 namespace MindfulnessProgram
 {
