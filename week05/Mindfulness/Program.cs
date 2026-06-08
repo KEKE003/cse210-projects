@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 /* ========CREATIVITY:
 1.Enhanced Random Poll Tracking. The ReflectionActivity.cs and the ListingActivity.cs have been upgraded to not repeat any prompt or question in a session.===========================*/
