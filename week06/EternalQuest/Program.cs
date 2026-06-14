@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+//========================CREATIVITY REPORT =========================================
+// Added an automatic leveling system, users gain titles
+// Created a BadHabitGoal class that helps track things the user wants to stop doing
+//===================================================================================
+
 namespace EternalQuest
 {
     class Program
@@ -79,7 +84,7 @@ namespace EternalQuest
             Console.WriteLine("3.Checklist Goal (Bonus points after multiple times)");
             Console.WriteLine("4.Bad Habit Goal (Negative points for slipping up)");
 
-            Console.Write("Which type of goal would you like to create?");
+            Console.Write("Which type of goal would you like to create? ");
             string type = Console.ReadLine();
 
             Console.Write("What is the name of the goal? ");
@@ -143,9 +148,10 @@ namespace EternalQuest
             if (_goals.Count == 0)
             {
                 Console.WriteLine("No goals available to record.");
-                Console.ReadLine();
+                Console.WriteLine("Press Enter to return to the menu.");
                 return;
             }
+            
             for (int i = 0; i < _goals.Count; i++)
             {
                Console.WriteLine($"{i + 1}.{_goals[i].GetName}");
@@ -199,6 +205,8 @@ namespace EternalQuest
         {
             Console.Write("What is the filename for the goal file? ");
             string filename = Console.ReadLine();
+            string content = File.ReadAllText(filename);
+            Console.WriteLine(content);
 
             if (!File.Exists(filename))
             {
@@ -230,8 +238,7 @@ namespace EternalQuest
                 else if (type == "ChecklistGoal")
                 {
                     ChecklistGoal cg = new ChecklistGoal(details[0], details[1], int.Parse(details[2]), int.Parse(details[4]), int.Parse(details[3]));
-                    int completedCount = int.Parse(details[5]);
-
+                    int completedCount = int.Parse(details[0]);
                     for (int c = 0; c < completedCount; c++) cg.LoadProgress();
                     _goals.Add(cg);
                 }
