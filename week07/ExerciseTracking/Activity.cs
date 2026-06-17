@@ -34,7 +34,7 @@ namespace ExerciseTracking
         }
         public virtual string GetSummary()
         {
-            return $"{_date} Activity({_minutes}min)";
+            return $"{_date} Activity({_minutes} min)";
         }
     }
 }
