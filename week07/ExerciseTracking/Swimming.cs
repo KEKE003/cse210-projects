@@ -24,7 +24,7 @@ namespace ExerciseTracking
         }
         public override string GetSummary()
         {
-            return $"{GetDate()} Swimming({GetMinutes()} min) - Distance: {GetDistance(): 0.00} km, Speed: {GetSpeed(): 0.00} kph, Pace: {GetPace(): 0.00} min per km";
+            return $"{GetDate()} Swimming({GetMinutes()} min) - Distance {GetDistance(): 0.00} km, Speed {GetSpeed(): 0.00} kph, Pace: {GetPace(): 0.00} min per km";
         }
     }
 }
